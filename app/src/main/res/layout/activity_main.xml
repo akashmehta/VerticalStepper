@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_quiz_onboard"
+    android:paddingTop="34dp"
+    android:paddingBottom="34dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_centerInParent="true"
+        android:padding="36dp">
+
+        <LinearLayout
+            android:id="@+id/llStepQuizComplete"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_quiz_step_unselected"
+            android:padding="16dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:text="text_step_complete_quiz"
+                android:textColor="@android:color/white"
+                android:textSize="16sp"
+                 />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/llStepJoinContest"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/bg_quiz_step_unselected"
+            android:padding="16dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:text="text_quiz_step_join_contests"
+                android:textColor="@android:color/white"
+                android:textSize="16sp"
+                 />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/bg_quiz_step_unselected"
+            android:padding="16dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:text="text_quiz_step_win_prizes"
+                android:textColor="@android:color/white"
+                android:textSize="16sp"
+                 />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>
