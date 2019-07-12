@@ -95,13 +95,24 @@
             android:layout_marginBottom="55dp">
 
             <RelativeLayout
+                android:id="@+id/rlFirst"
                 android:layout_width="20dp"
                 android:layout_height="20dp"
                 android:layout_alignParentTop="true"
                 android:background="@drawable/bg_white_solid_circle">
+                <ImageView
+                    android:id="@+id/ivFirstTick"
+                    android:layout_width="14dp"
+                    android:layout_height="14dp"
+                    android:src="@drawable/ic_done_black_24dp"
+                    android:tint="@color/blue_1F528F"
+                    android:visibility="gone"
+                    android:layout_centerInParent="true"
+                    />
 
                 <TextView
                     android:id="@+id/tvFirst"
+                    android:visibility="visible"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_centerInParent="true"
@@ -111,13 +122,22 @@
             </RelativeLayout>
 
             <RelativeLayout
+                android:id="@+id/rlSecond"
                 android:layout_width="20dp"
                 android:layout_height="20dp"
                 android:layout_centerVertical="true"
                 android:background="@drawable/bg_white_outline_circle">
-
+                <ImageView
+                    android:id="@+id/ivSecondTick"
+                    android:layout_width="14dp"
+                    android:layout_height="14dp"
+                    android:src="@drawable/ic_done_black_24dp"
+                    android:tint="@color/blue_1F528F"
+                    android:visibility="gone"
+                    android:layout_centerInParent="true" />
                 <TextView
                     android:id="@+id/tvSecond"
+                    android:visibility="visible"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_centerInParent="true"
@@ -127,21 +147,87 @@
             </RelativeLayout>
 
             <RelativeLayout
+                android:id="@+id/rlThird"
                 android:layout_width="20dp"
                 android:layout_height="20dp"
                 android:layout_alignParentBottom="true"
                 android:background="@drawable/bg_white_outline_circle">
+                <ImageView
+                    android:id="@+id/ivThirdTick"
+                    android:layout_width="14dp"
+                    android:layout_height="14dp"
+                    android:src="@drawable/ic_done_black_24dp"
+                    android:tint="@color/blue_1F528F"
+                    android:visibility="gone"
+                    android:layout_centerInParent="true"
+                    />
 
                 <TextView
                     android:id="@+id/tvThird"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_centerInParent="true"
+                    android:visibility="visible"
                     android:text="3"
                     android:textColor="@android:color/white"
                     android:textSize="10sp" />
             </RelativeLayout>
         </RelativeLayout>
     </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <Button
+            android:id="@+id/btnFirst"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="first"/>
+
+        <Button
+            android:id="@+id/btnSecond"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="second"/>
+        <Button
+            android:id="@+id/btnThird"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="third"/>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tvRealFirst"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="1"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:textColor="@color/blue_1F528F"
+        android:textSize="10sp" />
+
+    <TextView
+        android:id="@+id/tvRealSecond"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="1"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:textColor="@color/blue_1F528F"
+        android:textSize="10sp" />
+
+    <TextView
+        android:id="@+id/tvRealThird"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="1"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:textColor="@color/blue_1F528F"
+        android:textSize="10sp" />
 
 </android.support.constraint.ConstraintLayout>
