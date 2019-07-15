@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/clContent"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/bg_quiz_onboard"
@@ -113,10 +114,10 @@
                 <TextView
                     android:id="@+id/tvFirst"
                     android:visibility="visible"
+                    android:text="1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_centerInParent="true"
-                    android:text="1"
                     android:textColor="@color/blue_1F528F"
                     android:textSize="10sp" />
             </RelativeLayout>
@@ -138,10 +139,10 @@
                 <TextView
                     android:id="@+id/tvSecond"
                     android:visibility="visible"
+                    android:text="2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_centerInParent="true"
-                    android:text="2"
                     android:textColor="@android:color/white"
                     android:textSize="10sp" />
             </RelativeLayout>
@@ -168,7 +169,6 @@
                     android:layout_height="wrap_content"
                     android:layout_centerInParent="true"
                     android:visibility="visible"
-                    android:text="3"
                     android:textColor="@android:color/white"
                     android:textSize="10sp" />
             </RelativeLayout>
@@ -186,18 +186,6 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="first"/>
-
-        <Button
-            android:id="@+id/btnSecond"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="second"/>
-        <Button
-            android:id="@+id/btnThird"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="third"/>
-
     </LinearLayout>
 
     <TextView
@@ -207,14 +195,14 @@
         android:text="1"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        android:textColor="@color/blue_1F528F"
+        android:textColor="@android:color/white"
         android:textSize="10sp" />
 
     <TextView
         android:id="@+id/tvRealSecond"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="1"
+        android:text="2"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         android:textColor="@color/blue_1F528F"
@@ -224,10 +212,10 @@
         android:id="@+id/tvRealThird"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="1"
+        android:text="3"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        android:textColor="@color/blue_1F528F"
+        android:textColor="@android:color/white"
         android:textSize="10sp" />
 
 </android.support.constraint.ConstraintLayout>

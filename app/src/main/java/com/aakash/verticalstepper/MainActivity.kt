@@ -15,23 +15,22 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         v?.let {
             when (it.id) {
                 R.id.btnFirst -> {
+                    tvFirst.text = ""
+                    tvSecond.text = ""
+                    tvThird.text = ""
                     val toX = rlSecond.x
                     val toY = rlSecond.y
                     val fromX = rlFirst.x
                     val fromY = rlFirst.y
                     rlSecond.setSolidBg()
                     ivFirstTick.setVisible()
-                    tvFirst.setGone()
-                    tvSecond.setTextColor(ContextCompat.getColor(this, R.color.blue_1F528F))
+
+                    tvRealFirst.setGone()
                     val animation = TranslateAnimation(fromX, toX, -toY, fromY)
                     animation.duration = 1000
-                    tvSecond.startAnimation(animation)
-                }
-                R.id.btnSecond -> {
+                    tvRealSecond.startAnimation(animation)
 
-                }
-                R.id.btnThird -> {
-
+                    tvRealThird.startAnimation(animation)
                 }
             }
         }
@@ -41,17 +40,23 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         super.onCreate(savedInstanceState)
         requestWindowFeature(Window.FEATURE_NO_TITLE)
         setContentView(R.layout.activity_main)
-        btnFirst.setOnClickListener(this)
-        setLocation(tvFirst, tvRealFirst)
-        setLocation(tvSecond, tvRealSecond)
-        setLocation(tvThird, tvRealThird)
+        window.decorView.post {
+            val viewTreeObserver = window.decorView.viewTreeObserver
+            viewTreeObserver.addOnDrawListener {
+                btnFirst.setOnClickListener(this)
+                setLocation(tvFirst, tvRealFirst)
+                setLocation(tvSecond, tvRealSecond)
+                setLocation(tvThird, tvRealThird)
+            }
+        }
+
     }
 
-    private fun setLocation(source: TextView, dest : TextView) {
+    private fun setLocation(source: TextView, dest: TextView) {
         val loc = IntArray(2)
         source.getLocationInWindow(loc)
-        dest.x = loc[0].toFloat()
-        dest.y = loc[1].toFloat()
+        dest.x = loc[0].toFloat() - 5
+        dest.y = loc[1].toFloat() - 162
     }
 
     private fun RelativeLayout.setSolidBg() {
@@ -62,7 +67,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         this.background = ContextCompat.getDrawable(this@MainActivity, R.drawable.bg_white_outline_circle)
     }
 
-    fun View.setVisibility(isShow : Boolean) {
+    fun View.setVisibility(isShow: Boolean) {
         this.visibility = if (isShow) View.VISIBLE else View.GONE
     }
 
